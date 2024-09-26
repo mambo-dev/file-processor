@@ -1,2 +1,9 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script lang="ts">
+	import { Input } from '$lib/components/ui/input/index.js';
+	import { Label } from '$lib/components/ui/label/index.js';
+</script>
+
+<div class="grid w-full max-w-sm items-center gap-1.5">
+	<Label for="picture">Picture</Label>
+	<Input id="picture" type="file" />
+</div>
