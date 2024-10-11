@@ -36,6 +36,8 @@ const sortBy = z.object({
 	sortInstructions: z.enum(['asc', 'desc'])
 });
 
+// TODO:restrict on frontend sort by a then by b so array comes in etc...
+// as the backend will process them in the order they appear in the array.
 export const sort = z
 	.object({
 		by: z.array(sortBy).min(1, 'enter atleast one sort')
