@@ -9,10 +9,13 @@
 
 	const spForm = superForm(data.form, {
 		validators: zodClient(fileSchema),
+		applyAction: true,
 		delayMs: 100,
 		timeoutMs: 5000,
 		onSubmit: () => {},
-		onResult: () => {}
+		onResult: (event) => {
+			console.log(event.result.status);
+		}
 	});
 
 	const { form: formData, enhance, errors, delayed, submitting, timeout } = spForm;
